@@ -1,0 +1,30 @@
+.header
+{
+  border-radius: 5px;
+  background-color: grey;
+  margin: 5px;
+  padding: 10px;
+  color: white;
+}
+
+.flexRow
+{
+  display: flex;
+
+  .flexColumn
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .flexShrink
+    {
+      flex-shrink: 1;
+    }
+  }
+
+  .flexGrow
+  {
+    flex-grow: 1;
+  }
+}

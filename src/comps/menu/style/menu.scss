@@ -1,0 +1,25 @@
+.menu
+{
+  border-radius: 5px;
+  background-color: white;
+  margin: 1px;
+  padding: 4px;
+  color: grey;
+  cursor: pointer;
+
+  .key
+  {
+    cursor: pointer;
+    display: inline-flex;
+  }
+
+  .wrapper
+  {
+    background-color: inherit;
+    border-radius: inherit;
+    padding: inherit;
+    position: absolute;
+    visibility: hidden;
+    cursor: initial;
+  }
+}

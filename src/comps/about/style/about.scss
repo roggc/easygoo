@@ -1,0 +1,30 @@
+@keyframes bounce
+{
+  25% {transform: scale(1.5);}
+  50% {transform: scale(1);}
+  75% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+}
+
+@keyframes fade
+{
+  from {opacity:0}
+  to {opacity:1}
+}
+
+.about
+{
+  font-size: 1.9em;
+}
+
+.fade
+{
+  animation-name: fade;
+  animation-duration: 1s;
+
+  .bounce
+  {
+    animation-name: bounce;
+    animation-duration: 1s;
+  }
+}
