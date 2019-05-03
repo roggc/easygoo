@@ -9,11 +9,13 @@ import Content from '../comps/content/render/content'
 import Footer from '../comps/footer/render/footer'
 import Home from '../comps/home/render/home'
 import About from '../comps/about/render/about'
+import Graphql from '../comps/graphql/render/graphql'
 import SayHello from '../comps/sayHello/render/sayHello'
 import Say from '../comps/say/render/say'
 import Posts from '../comps/posts/render/posts'
 import {homeSetShow} from '../comps/home/redux/actions'
 import {aboutSetShow} from '../comps/about/redux/actions'
+import {graphqlSetShow} from '../comps/graphql/redux/actions'
 
 export default
 (()=>
@@ -31,11 +33,11 @@ export default
       <Header name='header1' title={'React app ...'}>
         {
           {
-            name: 'content1',
             items:
             [
               {text:'home',name:'home1',func:homeSetShow},
               {text:'about',name:'about1',func:aboutSetShow},
+              {text:'graphql',name:'graphql1',func:graphqlSetShow},
             ]
           }
         }
@@ -47,6 +49,7 @@ export default
         <About name='about1'>
           nppcpp ...
         </About>
+        <Graphql name='graphql1'/>
       </Content>
       <Footer name='footer1'>
         &copy; 2019 React corp dev

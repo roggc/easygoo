@@ -13,9 +13,9 @@ export default store => next => act =>
     key=>
     {
       const comp = state.comps[key]
-      act.type=== types.MENU_SET_ITEM_+comp.name&&
+      comp.route&& act.type=== types.MENU_SET_ITEM_+comp.name&&
       (
-        comp.clicked? history.pushState(comp.item,null,comp.children.items[comp.item].text):
+        comp.clicked?history.pushState(comp.item,null,comp.children.items[comp.item].text):
         comp.clicked===undefined?true:history.replaceState(comp.item,null,comp.children.items[comp.item].text)
       )
     }

@@ -1,0 +1,30 @@
+@keyframes fade
+{
+  from {opacity:0}
+  to {opacity:1}
+}
+
+.graphql
+{
+  display:flex;
+  overflow:auto;
+  animation-name: fade;
+  animation-duration: 1s;
+
+  .wrapper
+  {
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+    margin: 0px 5px 0px 0px;
+    display: inline-flex;
+  }
+
+  .spinner
+  {
+    background-color: white;
+    border-radius: 5px;
+    padding:5px;
+    color:grey;
+  }
+}

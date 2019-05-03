@@ -11,7 +11,7 @@ export default store => next => action =>
     key=>
     {
       const comp = state.comps[key]
-      comp.show&& comp.pending&& store.dispatch(comp.fetch())
+      comp.show&& comp.pending&& !comp.fetching&& store.dispatch(comp.fetch())
     }
   )
 }

@@ -18,6 +18,13 @@ export const postsReset= name=>()=>
   }
 )
 
+const postsFetching=name=>()=>
+(
+  {
+    type:types.POSTS_FETCHING_+name
+  }
+)
+
 export const postsFetch= name=> ()=> (dispatch)=>
 {
   const data=
@@ -29,6 +36,7 @@ export const postsFetch= name=> ()=> (dispatch)=>
       'this is another post'
     ]
   }
+  dispatch(postsFetching(name)())
   setTimeout(()=>dispatch(postsSet(name)(data)), store.getState().comps[name].time)
 }
 

@@ -7,6 +7,7 @@ export default name=> (val=
   {
     show: false,
     pending: true,
+    fetching: false,
     data: {},
     fetch: postsFetch(name),
     reset: postsReset(name),
@@ -20,6 +21,7 @@ export default name=> (val=
       {
         ...val,
         pending: false,
+        fetching:false,
         data: act.val
       }
       return val
@@ -43,6 +45,13 @@ export default name=> (val=
       {
         ...val,
         show: act.val
+      }
+      return val
+    case types.POSTS_FETCHING_+name:
+      val=
+      {
+        ...val,
+        fetching: true
       }
       return val
     default:
