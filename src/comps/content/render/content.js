@@ -15,9 +15,12 @@ const init= name=> init=>
 const inst= name=> state=>
 (
   state.foo.show&&
-  <div className= {`${style.content} ${style.flexColumn}`}>
-    <div className={style.flexRow}>
-      {state.foo.children}
+  <div>
+    <div className={style.wrapper}>{state.foo.email}</div>
+    <div className={`${style.content} ${style.flexColumn}`}>
+        <div className={style.flexRow}>
+          {state.foo.children}
+        </div>
     </div>
   </div>
 )

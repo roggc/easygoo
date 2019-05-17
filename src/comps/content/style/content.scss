@@ -8,6 +8,16 @@
   height: 447px;
 }
 
+.wrapper
+{
+  position:absolute;
+  border-radius: 5px;
+  background-color: grey;
+  margin: 5px;
+  padding: 10px;
+  color: white;
+}
+
 .flexColumn
 {
   display: flex;

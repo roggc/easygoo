@@ -10,12 +10,19 @@ import Footer from '../comps/footer/render/footer'
 import Home from '../comps/home/render/home'
 import About from '../comps/about/render/about'
 import Graphql from '../comps/graphql/render/graphql'
+import Mongo from '../comps/mongo/render/mongo'
+import Logsignin from '../comps/logsignin/render/logsignin'
+import Loading from '../comps/loading/render/loading'
 import SayHello from '../comps/sayHello/render/sayHello'
 import Say from '../comps/say/render/say'
 import Posts from '../comps/posts/render/posts'
 import {homeSetShow} from '../comps/home/redux/actions'
 import {aboutSetShow} from '../comps/about/redux/actions'
 import {graphqlSetShow} from '../comps/graphql/redux/actions'
+import {mongoSetShow} from '../comps/mongo/redux/actions'
+import {logsigninSetShow} from '../comps/logsignin/redux/actions'
+import {loadingSetShow} from '../comps/loading/redux/actions'
+import {contentSetEmail} from '../comps/content/redux/actions'
 
 export default
 (()=>
@@ -38,11 +45,15 @@ export default
               {text:'home',name:'home1',func:homeSetShow},
               {text:'about',name:'about1',func:aboutSetShow},
               {text:'graphql',name:'graphql1',func:graphqlSetShow},
+              {text:'mongo',name:'mongo1',func:mongoSetShow},
+              {text:'logsignin',name:'logsignin1',func:logsigninSetShow},
+              {text:'',name:'loading1',func:loadingSetShow}
             ]
           }
         }
       </Header>
       <Content name='content1'>
+        <Loading name='loading1' show={true}/>
         <Home name='home1'>
           hello ...
         </Home>
@@ -50,6 +61,8 @@ export default
           nppcpp ...
         </About>
         <Graphql name='graphql1'/>
+        <Mongo name='mongo1'/>
+        <Logsignin name='logsignin1' listeners={[contentSetEmail('content1')]}/>
       </Content>
       <Footer name='footer1'>
         &copy; 2019 React corp dev

@@ -1,0 +1,50 @@
+@keyframes fade
+{
+  from {opacity:0}
+  to {opacity:1}
+}
+
+.mongo
+{
+  --display:flex;
+  --overflow:auto;
+  animation-name: fade;
+  animation-duration: 1s;
+
+  .wrapper
+  {
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+    color:grey;
+    animation-name: fade;
+    animation-duration: 1s;
+
+    .wrapper
+    {
+      display: flex;
+      --flex-direction: column;
+
+      .wrapper
+      {
+        display:flex;
+        flex-direction: column;
+        --flex-wrap: nowrap;
+      }
+
+      .wrapper>div
+      {
+        --width:min-content;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .spinner
+  {
+    background-color: white;
+    border-radius: 5px;
+    padding:5px;
+    color:grey;
+  }
+}

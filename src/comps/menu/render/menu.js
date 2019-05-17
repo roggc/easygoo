@@ -48,6 +48,7 @@ const inst= name=> state=>
             state.foo.children.items.map
             (
               (item, key)=>
+              item.text&& item.text.length>0&&
               <div key={key} className={style.key} onClick={menuClick(key)(true)}>
                 <i className="fas fa-angle-right"></i><div>{item.text}</div>
               </div>

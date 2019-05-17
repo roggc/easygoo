@@ -22,7 +22,6 @@ export const graphqlSetShow= name=> val=>dispatch=>
   if (!val) dispatch(graphqlReset(name)())
 }
 
-
 const graphqlSet= name=> val=>
 (
   {
@@ -43,7 +42,7 @@ export const graphqlFetch= name=> ()=> dispatch=>
   dispatch(graphqlFetching(name)())
   request
   (
-    'https://graphql.anilist.co',
+    __anilist__,
     `
       query {
         Page {

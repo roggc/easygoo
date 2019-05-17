@@ -9,3 +9,11 @@ export const contentSetChildren= name=> val=>
     val: val
   }
 )
+
+export const contentSetEmail=name=>val=>
+(
+  {
+    type:types.CONTENT_SET_EMAIL_+name,
+    val: val&& val.email
+  }
+)

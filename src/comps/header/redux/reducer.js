@@ -24,6 +24,13 @@ export default name=> (val=
         children: act.val
       }
       return val
+    case types.HEADER_SET_EMAIL_+name:
+      val=
+      {
+        ...val,
+        email: act.val
+      }
+      return val
     default:
       return val
   }

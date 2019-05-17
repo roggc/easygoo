@@ -17,3 +17,11 @@ export const headerSetChildren= name=> val=>
     val: val
   }
 )
+
+export const headerSetEmail=name=>val=>
+(
+  {
+    type:types.HEADER_SET_EMAIL_+name,
+    val: val&& val.email
+  }
+)

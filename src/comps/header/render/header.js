@@ -23,6 +23,13 @@ const inst= name=> state=>
         {state.foo.title}
       </div>
     </div>
+    {
+      // <div className={`${style.flexColumn}`}>
+      //   <div className={`${style.flexShrink}`}>
+      //     {state.foo.email}
+      //   </div>
+      // </div>
+    }
     <Menu name='menu1' route={true}>
       {state.foo.children}
     </Menu>
