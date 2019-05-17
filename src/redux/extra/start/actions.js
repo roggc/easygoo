@@ -82,6 +82,10 @@ export const start= ()=>(dispatch)=>
           }
         )
       }
+      else
+      {
+        setRoute()
+      }
     }
   )
 }
