@@ -6,6 +6,7 @@ export default new GraphQLClient
 (
   __backend__
   ,{
-    credentials: 'include'
+    credentials: 'include',
+    mode:'cors'
   }
 )
