@@ -11,6 +11,11 @@ export const menuSetChildren= name=> val=>
   }
 )
 
+export const menuSetItemByText=name=>val=>clicked=>dispatch=>
+{
+  
+}
+
 export const menuSetItem= name=> val=> clicked=> dispatch=>
 {
   const state= store.getState()

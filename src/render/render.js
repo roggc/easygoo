@@ -23,6 +23,7 @@ import {mongoSetShow} from '../comps/mongo/redux/actions'
 import {logsigninSetShow} from '../comps/logsignin/redux/actions'
 import {loadingSetShow} from '../comps/loading/redux/actions'
 import {contentSetEmail} from '../comps/content/redux/actions'
+import {logsigninOut} from '../comps/logsignin/redux/actions'
 
 export default
 (()=>
@@ -52,7 +53,7 @@ export default
           }
         }
       </Header>
-      <Content name='content1'>
+      <Content name='content1' listeners={[logsigninOut('logsignin1')]}>
         <Loading name='loading1' show={true}/>
         <Home name='home1'>
           hello ...

@@ -7,6 +7,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const devMode = process.env.NODE_ENV !== 'production'
+const backend='https://mongo-graphql.herokuapp.com'
+const backenddev='http://localhost:4000'
 
 module.exports =
 {
@@ -66,7 +68,8 @@ module.exports =
     new webpack.DefinePlugin
     (
       {
-        __devMode__: devMode
+        __devMode__: devMode,
+        __backend__:'\''+backenddev+'\''
       }
     )
   ],
@@ -79,6 +82,11 @@ module.exports =
   },
   resolve:
   {
+    modules:
+    [
+      "node_modules",
+      path.resolve(__dirname, "./")
+    ],
     extensions: ['.js','.css','.scss','.sass']
   }
 }

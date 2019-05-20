@@ -9,7 +9,7 @@ export default name=> (val=
     fetching:false,
     data:{},
     listeners:undefined,
-    keepActs:[types.LOGSIGNIN_SET_+name]
+    //keepActs:[types.LOGSIGNIN_SET_+name]
   },act)=>
   {
     switch (act.type) {
@@ -27,6 +27,14 @@ export default name=> (val=
           data: act.val,
           fetched:true,
           fetching:false
+        }
+        return val
+      case types.LOGSIGNIN_OUT_+name:
+        val=
+        {
+          ...val,
+          data: {},
+          fetched:false
         }
         return val
       case types.LOGSIGNIN_FETCHING_+name:

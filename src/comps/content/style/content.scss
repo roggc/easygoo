@@ -18,6 +18,20 @@
   color: white;
 }
 
+.logout
+{
+  position:absolute;
+  background-color: grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  right: 8px;
+  z-index: 0;
+  color:white;
+  text-decoration: underline;
+  cursor:pointer;
+}
+
 .flexColumn
 {
   display: flex;

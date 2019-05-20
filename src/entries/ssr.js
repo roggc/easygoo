@@ -38,10 +38,6 @@ export const render= (req, res)=>
         (
           '$item',
           item
-        ).replace
-        (
-          '$clientId',
-          req.connection.remoteAddress
         )
       )
     }

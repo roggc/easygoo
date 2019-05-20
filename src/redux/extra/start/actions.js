@@ -29,7 +29,7 @@ export const start= ()=>(dispatch)=>
     `
       query
       {
-        getActs(clientId:"${window.__clientId__}")
+        getActs
         {
           res
           {
@@ -55,7 +55,7 @@ export const start= ()=>(dispatch)=>
           `
             mutation
             {
-              clearActs(clientId:"${window.__clientId__}")
+              clearActs
               {
                 res
                 error

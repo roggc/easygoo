@@ -8,7 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const devMode = process.env.NODE_ENV !== 'production'
 const backend='https://mongo-graphql.herokuapp.com'
-const backenddev='http://localhost:5000'
+const backenddev='http://localhost:4000'
 const anilist='https://graphql.anilist.co'
 
 module.exports =
@@ -101,7 +101,7 @@ module.exports =
     (
       {
         __devMode__: devMode,
-        __backend__:'\''+backend+'\'',
+        __backend__:'\''+backenddev+'\'',
         __anilist__:'\''+anilist+'\''
       }
     )
@@ -115,6 +115,11 @@ module.exports =
   },
   resolve:
   {
+    modules:
+    [
+      "node_modules",
+      path.resolve(__dirname, "./")
+    ],
     extensions: ['.js','.css','.scss','.sass','.ico']
   }
 }

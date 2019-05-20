@@ -25,7 +25,7 @@ export default store => next => act =>
               `
               mutation
               {
-                pushAct(clientId:"${window.__clientId__}",act:${JSON.stringify(JSON.stringify(act))},type:"${type}")
+                pushAct(act:${JSON.stringify(JSON.stringify(act))},type:"${type}")
                 {
                   res
                   error

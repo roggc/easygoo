@@ -18,6 +18,13 @@ export default name=> (val=
         children: act.val
       }
       return val
+    case types.CONTENT_SET_LISTENERS_+name:
+      val=
+      {
+        ...val,
+        listeners: act.val
+      }
+      return val
     case types.CONTENT_SET_EMAIL_+name:
       val=
       {

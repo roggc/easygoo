@@ -33,11 +33,11 @@ const inst= name=> state=>
           state.foo.data.users.error&&
           (
             <div className={style.wrapper}>
-              <div className={style.wrapper}><div>name:</div><div>message:</div><div>category:</div></div>
+              <div className={style.wrapper}><div>name:</div><div>message:</div><div>function:</div></div>
               <div className={style.wrapper}>
                 <div>{state.foo.data.users.error.name}</div>
                 <div>{state.foo.data.users.error.message}</div>
-                <div>{state.foo.data.users.error.category}</div>
+                <div>{state.foo.data.users.error.function}</div>
               </div>
             </div>
           )

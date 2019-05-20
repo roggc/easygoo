@@ -29,6 +29,14 @@ const logsigninSet= name=> val=>
   }
 )
 
+export const logsigninOut= name=> ()=>
+(
+  {
+    type: types.LOGSIGNIN_OUT_+name
+  }
+)
+
+
 const logsigninFetching= name=> ()=>
 (
   {
