@@ -101,7 +101,7 @@ module.exports =
     (
       {
         __devMode__: devMode,
-        __backend__:'\''+backenddev+'\'',
+        __backend__:'\''+backend+'\'',
         __anilist__:'\''+anilist+'\''
       }
     )
