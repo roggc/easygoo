@@ -10,3 +10,32 @@ export default new GraphQLClient
     mode:'cors'
   }
 )
+
+import axios from 'axios'
+
+class Axios
+{
+  constructor({baseURL})
+  {
+    this.axios = axios.create
+    ({
+      baseURL,
+      withCredentials:true
+    })
+  }
+
+  query(query)
+  {
+    return cb=>
+    {
+      return this.axios.post
+      ('',
+      {
+        query
+      })
+      .then(response=>cb(response.data.data))
+    }
+  }
+}
+
+export const graphql= new Axios({baseURL:__backend__})

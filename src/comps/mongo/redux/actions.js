@@ -1,7 +1,7 @@
 __devMode__&& console.log('src/comps/mongo/redux/actions')
 
 import * as types from './types'
-import client from 'src/other/graphql'
+import {graphql} from 'src/other/graphql'
 
 const mongoReset= name=>()=>
 (
@@ -40,7 +40,7 @@ const mongoFetching= name=> ()=>
 export const mongoFetch= name=> ()=> dispatch=>
 {
   dispatch(mongoFetching(name)())
-  client.request
+  graphql.query
   (
     `
       query
@@ -62,5 +62,5 @@ export const mongoFetch= name=> ()=> dispatch=>
         }
       }
     `
-  ).then(data=> dispatch(mongoSet(name)(data)))
+  )(data=> dispatch(mongoSet(name)(data)))
 }
