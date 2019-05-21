@@ -7,7 +7,7 @@ const HtmlWebpackPlugin= require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const devMode = process.env.NODE_ENV !== 'production'
-const backend='https://mongo-graphql.herokuapp.com'
+const backend='http://enjoy.easygoo.tk'
 const backenddev='http://localhost:4000'
 const anilist='https://graphql.anilist.co'
 
