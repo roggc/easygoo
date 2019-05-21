@@ -7,7 +7,7 @@ const HtmlWebpackPlugin= require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const devMode = process.env.NODE_ENV !== 'production'
-const backend='http://enjoy.easygoo.tk'
+const backend='http://api.easygoo.tk'
 const backenddev='http://localhost:4000'
 const anilist='https://graphql.anilist.co'
 
