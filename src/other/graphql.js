@@ -39,3 +39,24 @@ class Axios
 }
 
 export const graphql= new Axios({baseURL:__backend__})
+
+export const graphqlfetch=query=>cb=>
+{
+  fetch
+  (
+    __backend__,
+    {
+      method: 'POST',
+      body: JSON.stringify({query}),
+      headers:
+      {
+        'Content-Type': 'application/json'
+      },
+      credentials:'include',
+      mode:'cors'
+    }
+  )
+  .then(res => res.json())
+  .catch(error => console.error('Error:', error))
+  .then(response => cb(response.data))
+}

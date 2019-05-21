@@ -1,7 +1,7 @@
 __devMode__&& console.log('src/comps/logsignin/redux/actions')
 
 import * as types from './types'
-import {graphql} from 'src/other/graphql'
+import {graphqlfetch} from 'src/other/graphql'
 
 // const logsigninReset= name=>()=>
 // (
@@ -47,7 +47,7 @@ const logsigninFetching= name=> ()=>
 export const logsigninFetch= name=> data=> dispatch=>
 {
   dispatch(logsigninFetching(name)())
-  graphql.query
+  graphqlfetch
   (
     `
       mutation
