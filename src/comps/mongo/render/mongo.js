@@ -22,7 +22,7 @@ const inst= name=> state=>
           state.foo.data.users.res&& state.foo.data.users.res.map
           (
             user=>
-            <div>
+            <div key={user.id}>
               <div>{user.name}</div>
               <div>{user.email}</div>
               <div>{user.id}</div>

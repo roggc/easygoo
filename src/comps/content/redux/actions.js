@@ -1,7 +1,7 @@
 __devMode__&& console.log('src/comps/content/redux/actions')
 
 import * as types from './types'
-import {request} from 'graphql-request'
+import client from 'src/other/graphql'
 
 export const contentSetChildren= name=> val=>
 (
@@ -29,9 +29,8 @@ export const contentSetEmail=name=>val=>
 
 export const contentLogout=name=>listeners=>dispatch=>
 (
-  request
+  client.request
   (
-    __backend__,
     `
       mutation
       {
