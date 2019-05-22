@@ -38,16 +38,16 @@ export default
         <Posts name='posts2' time={5000} show={undefined}/>
       </div>
     }>
-      <Header name='header1' title={'React app ...'}>
+      <Header name='header1' title={'easyGoo !!!'}>
         {
           {
             items:
             [
               {text:'home',name:'home1',func:homeSetShow},
               {text:'about',name:'about1',func:aboutSetShow},
-              {text:'graphql',name:'graphql1',func:graphqlSetShow},
-              {text:'mongo',name:'mongo1',func:mongoSetShow},
-              {text:'logsignin',name:'logsignin1',func:logsigninSetShow},
+              {text:'anilist',name:'graphql1',func:graphqlSetShow},
+              {text:'users',name:'mongo1',func:mongoSetShow},
+              {text:'login',name:'logsignin1',func:logsigninSetShow},
               {text:'',name:'loading1',func:loadingSetShow}
             ]
           }
@@ -56,17 +56,17 @@ export default
       <Content name='content1' listeners={[logsigninOut('logsignin1')]}>
         <Loading name='loading1' show={true}/>
         <Home name='home1'>
-          hello ...
+          wellcome to easygoo. have fun and enjoy ...
         </Home>
         <About name='about1'>
-          nppcpp ...
+          easygoo it's a react development team ...
         </About>
         <Graphql name='graphql1'/>
         <Mongo name='mongo1'/>
         <Logsignin name='logsignin1' listeners={[contentSetEmail('content1')]}/>
       </Content>
       <Footer name='footer1'>
-        &copy; 2019 React corp dev
+        &copy; 2019 easygoo development
       </Footer>
     </App>
   </Provider>
