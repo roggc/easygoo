@@ -69,7 +69,7 @@ module.exports =
     (
       {
         __devMode__: devMode,
-        __backend__:'\''+backend+'\''
+        __backend__:'\''+backenddev+'\''
       }
     )
   ],
